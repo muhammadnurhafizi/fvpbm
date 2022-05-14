@@ -38,8 +38,8 @@ class RoleController extends Controller
     public function store(Request $request)
     {
         $role = new Role;
-        $role->name = $request->name;
-        $role->description = $request->description;
+        $role->name = strtolower($request->name);
+        $role->description = strtolower($request->description);
         $role->save();
 
         return redirect()->route('roles.index');
@@ -76,8 +76,8 @@ class RoleController extends Controller
      */
     public function update(Request $request, Role $role)
     {
-        $role->name = $request->name;
-        $role->description = $request->description;
+        $role->name = strtolower($request->name);
+        $role->description = strtolower($request->description);
         $role->update();
 
         return redirect()->route('roles.show', compact('role'));
