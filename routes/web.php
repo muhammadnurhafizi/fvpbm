@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::resource('roles', App\Http\Controllers\RoleController::class);
+Route::resource('users', App\Http\Controllers\UserController::class);
