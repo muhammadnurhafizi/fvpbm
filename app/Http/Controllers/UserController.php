@@ -14,11 +14,22 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::paginate(15);
+        $keyword = $request->keyword;
+        $users = User::where([
+            [function ($query) use ($request) {
+                if (($term = $request->keyword)) {
+                    $query->orWhere('username', 'LIKE', '%' . $term . '%')
+                        ->orWhere('email', 'LIKE', '%' . $term . '%')
+                        ->get();
+                }
+            }]
+        ])
+            ->orderBy('username')
+            ->paginate(15);
 
-        return view('users.index', compact('users'));
+        return view('users.index', compact('keyword', 'users'));
     }
 
     /**
