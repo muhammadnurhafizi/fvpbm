@@ -12,6 +12,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbar-menu-user-management">
                         <li><a class="dropdown-item" href="{{ route('roles.index') }}">Roles</a></li>
+                        <li><a class="dropdown-item" href="{{ route('users.index') }}">Users</a></li>
                     </ul>
                 </li>
             </ul>
