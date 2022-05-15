@@ -12,11 +12,22 @@ class RoleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $roles = Role::paginate(15);
+        $keyword = $request->keyword;
+        $roles = Role::where([
+            [function ($query) use ($request) {
+                if (($term = $request->keyword)) {
+                    $query->orWhere('name', 'LIKE', '%' . $term . '%')
+                        ->orWhere('description', 'LIKE', '%' . $term . '%')
+                        ->get();
+                }
+            }]
+        ])
+            ->orderBy('name')
+            ->paginate(15);
 
-        return view('roles.index', compact('roles'));
+        return view('roles.index', compact('keyword', 'roles'));
     }
 
     /**

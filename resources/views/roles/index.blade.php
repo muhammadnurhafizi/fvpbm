@@ -9,6 +9,14 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
+                <div class="card-header">
+                    <form action="{{ route('roles.index') }}" method="get">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="keyword" placeholder="Search..." value="{{ $keyword }}">
+                            <button class="btn btn-outline-secondary"><i class="fas fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table text-nowrap align-middle">
