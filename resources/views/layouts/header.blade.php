@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
     <div class="container-fluid">
-        <a class="navbar-brand mb-0 h1" href="#">{{ env('APP_NAME') }}</a>
+        <a class="navbar-brand mb-0 h1" href="#">{{ env('APP_NAME', 'Farmasi Veteran') }}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -13,6 +13,14 @@
                     <ul class="dropdown-menu" aria-labelledby="navbar-menu-user-management">
                         <li><a class="dropdown-item" href="{{ route('roles.index') }}">Roles</a></li>
                         <li><a class="dropdown-item" href="{{ route('users.index') }}">Users</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbar-menu-user-management" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Maintenances
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbar-menu-user-management">
+                        <li><a class="dropdown-item" href="{{ route('clinics.index') }}">Clinics</a></li>
                     </ul>
                 </li>
             </ul>
