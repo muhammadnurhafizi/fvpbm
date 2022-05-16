@@ -24,7 +24,6 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Name</th>
-                                    <th>Description</th>
                                 </tr>
                             </thead>
                             <tbody class="table-group-divider">
