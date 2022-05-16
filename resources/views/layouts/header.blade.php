@@ -24,6 +24,7 @@
                         <li><a class="dropdown-item" href="{{ route('clinics.index') }}">Clinics</a></li>
                         <li><a class="dropdown-item" href="{{ route('frequencies.index') }}">Frequencies</a></li>
                         <li><a class="dropdown-item" href="{{ route('hospitals.index') }}">Hospitals</a></li>
+                        <li><a class="dropdown-item" href="{{ route('veteranStatuses.index') }}">Veteran Statuses</a></li>
                     </ul>
                 </li>
             </ul>
