@@ -25,3 +25,4 @@ Route::resource('hospitals', App\Http\Controllers\HospitalController::class);
 Route::resource('frequencies', App\Http\Controllers\FrequencyController::class);
 Route::resource('agencies', App\Http\Controllers\AgencyController::class);
 Route::resource('veteranStatuses', App\Http\Controllers\VeteranStatusController::class);
+Route::resource('salesPersons', App\Http\Controllers\SalesPersonController::class);
