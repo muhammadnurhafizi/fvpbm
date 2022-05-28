@@ -49,8 +49,8 @@ class UOMController extends Controller
     public function store(Request $request)
     {
         $uOM = new UOM;
-        $uOM->name = $request->name;
-        $uOM->description = $request->description;
+        $uOM->name = strtolower($request->name);
+        $uOM->description = strtolower($request->description);
         $uOM->save();
 
         return redirect()->route('uOMs.index');
@@ -87,8 +87,8 @@ class UOMController extends Controller
      */
     public function update(Request $request, UOM $uOM)
     {
-        $uOM->name = $request->name;
-        $uOM->description = $request->description;
+        $uOM->name = strtolower($request->name);
+        $uOM->description = strtolower($request->description);
         $uOM->update();
 
         return redirect()->route('uOMs.show', compact('uOM'));
