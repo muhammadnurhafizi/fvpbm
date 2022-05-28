@@ -21,6 +21,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbar-menu-user-management">
                         <li><a class="dropdown-item" href="{{ route('agencies.index') }}">Agencies</a></li>
+                        <li><a class="dropdown-item" href="{{ route('armyTypes.index') }}">Army Types</a></li>
                         <li><a class="dropdown-item" href="{{ route('clinics.index') }}">Clinics</a></li>
                         <li><a class="dropdown-item" href="{{ route('frequencies.index') }}">Frequencies</a></li>
                         <li><a class="dropdown-item" href="{{ route('hospitals.index') }}">Hospitals</a></li>
