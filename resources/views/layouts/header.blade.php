@@ -28,6 +28,7 @@
                         <li><a class="dropdown-item" href="{{ route('quantityFormulas.index') }}">Quantity Formulas</a></li>
                         <li><a class="dropdown-item" href="{{ route('salesPersons.index') }}">Sales Persons</a></li>
                         <li><a class="dropdown-item" href="{{ route('states.index') }}">States</a></li>
+                        <li><a class="dropdown-item" href="{{ route('uOMs.index') }}">UOMs</a></li>
                         <li><a class="dropdown-item" href="{{ route('veteranStatuses.index') }}">Veteran Statuses</a></li>
                     </ul>
                 </li>
