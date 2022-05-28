@@ -28,3 +28,4 @@ Route::resource('veteranStatuses', App\Http\Controllers\VeteranStatusController:
 Route::resource('salesPersons', App\Http\Controllers\SalesPersonController::class);
 Route::resource('orderStatuses', App\Http\Controllers\OrderStatusController::class);
 Route::resource('states', App\Http\Controllers\StateController::class);
+Route::resource('quantityFormulas', App\Http\Controllers\QuantityFormulaController::class);
