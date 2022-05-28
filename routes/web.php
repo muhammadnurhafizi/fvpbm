@@ -29,3 +29,4 @@ Route::resource('salesPersons', App\Http\Controllers\SalesPersonController::clas
 Route::resource('orderStatuses', App\Http\Controllers\OrderStatusController::class);
 Route::resource('states', App\Http\Controllers\StateController::class);
 Route::resource('quantityFormulas', App\Http\Controllers\QuantityFormulaController::class);
+Route::resource('uOMs', App\Http\Controllers\UOMController::class);
