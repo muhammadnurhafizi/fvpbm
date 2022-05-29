@@ -48,7 +48,7 @@ class StateController extends Controller
     public function store(Request $request)
     {
         $state = new State;
-        $state->name = strtolower($request->name);
+        $state->name = $request->name;
         $state->save();
 
         return redirect()->route('states.index');
@@ -85,7 +85,7 @@ class StateController extends Controller
      */
     public function update(Request $request, State $state)
     {
-        $state->name = strtolower($request->name);
+        $state->name = $request->name;
         $state->update();
 
         return redirect()->route('states.show', compact('state'));

@@ -49,7 +49,7 @@ class PatientRelationController extends Controller
     public function store(Request $request)
     {
         $patientRelation = new PatientRelation;
-        $patientRelation->name = strtolower($request->name);
+        $patientRelation->name = $request->name;
         $patientRelation->description = strtolower($request->description);
         $patientRelation->save();
 
@@ -87,7 +87,7 @@ class PatientRelationController extends Controller
      */
     public function update(Request $request, PatientRelation $patientRelation)
     {
-        $patientRelation->name = strtolower($request->name);
+        $patientRelation->name = $request->name;
         $patientRelation->description = strtolower($request->description);
         $patientRelation->update();
 

@@ -49,7 +49,7 @@ class ClinicController extends Controller
     public function store(Request $request)
     {
         $clinic = new Clinic;
-        $clinic->name = strtolower($request->name);
+        $clinic->name = $request->name;
         $clinic->description = strtolower($request->description);
         $clinic->save();
 
@@ -87,7 +87,7 @@ class ClinicController extends Controller
      */
     public function update(Request $request, Clinic $clinic)
     {
-        $clinic->name = strtolower($request->name);
+        $clinic->name = $request->name;
         $clinic->description = strtolower($request->description);
         $clinic->update();
 

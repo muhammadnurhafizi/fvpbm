@@ -48,7 +48,7 @@ class SalesPersonController extends Controller
     public function store(Request $request)
     {
         $salesPerson = new SalesPerson;
-        $salesPerson->name = strtolower($request->name);
+        $salesPerson->name = $request->name;
         $salesPerson->save();
 
         return redirect()->route('salesPersons.index');
@@ -85,7 +85,7 @@ class SalesPersonController extends Controller
      */
     public function update(Request $request, SalesPerson $salesPerson)
     {
-        $salesPerson->name = strtolower($request->name);
+        $salesPerson->name = $request->name;
         $salesPerson->save();
 
         return redirect()->route('salesPersons.show', compact('salesPerson'));

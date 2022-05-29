@@ -51,7 +51,7 @@ class QuantityFormulaController extends Controller
     public function store(Request $request)
     {
         $quantityFormula = new QuantityFormula;
-        $quantityFormula->name = strtolower($request->name);
+        $quantityFormula->name = $request->name;
         $quantityFormula->description = strtolower($request->description);
         
         if ($request->toggle_quantity) {
@@ -98,7 +98,7 @@ class QuantityFormulaController extends Controller
      */
     public function update(Request $request, QuantityFormula $quantityFormula)
     {
-        $quantityFormula->name = strtolower($request->name);
+        $quantityFormula->name = $request->name;
         $quantityFormula->description = strtolower($request->description);
         
         if ($request->toggle_quantity) {

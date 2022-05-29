@@ -49,7 +49,7 @@ class HospitalController extends Controller
     public function store(Request $request)
     {
         $hospital = new Hospital;
-        $hospital->name = strtolower($request->name);
+        $hospital->name = $request->name;
         $hospital->description = strtolower($request->description);
         $hospital->save();
 
@@ -87,7 +87,7 @@ class HospitalController extends Controller
      */
     public function update(Request $request, Hospital $hospital)
     {
-        $hospital->name = strtolower($request->name);
+        $hospital->name = $request->name;
         $hospital->description = strtolower($request->description);
         $hospital->update();
 

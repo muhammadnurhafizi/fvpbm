@@ -49,7 +49,7 @@ class VeteranStatusController extends Controller
     public function store(Request $request)
     {
         $veteranStatus = new VeteranStatus;
-        $veteranStatus->name = strtolower($request->name);
+        $veteranStatus->name = $request->name;
         $veteranStatus->description = strtolower($request->description);
         $veteranStatus->save();
 
@@ -87,7 +87,7 @@ class VeteranStatusController extends Controller
      */
     public function update(Request $request, VeteranStatus $veteranStatus)
     {
-        $veteranStatus->name = strtolower($request->name);
+        $veteranStatus->name = $request->name;
         $veteranStatus->description = strtolower($request->description);
         $veteranStatus->update();
 

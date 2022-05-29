@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <a href="{{ route('veteranStatuses.create') }}" class="btn btn-primary float-end"><i class="fas fa-plus"></i> Create a new clinic</a>
+                    <a href="{{ route('veteranStatuses.create') }}" class="btn btn-primary float-end"><i class="fas fa-plus"></i> Create a new veteran status</a>
                 </div>
             </div>
         </div>

@@ -49,7 +49,7 @@ class OrderStatusController extends Controller
     public function store(Request $request)
     {        
         $orderStatus = new OrderStatus;
-        $orderStatus->name = strtolower($request->name);
+        $orderStatus->name = $request->name;
         $orderStatus->description = strtolower($request->description);
         $orderStatus->save();
 
@@ -87,7 +87,7 @@ class OrderStatusController extends Controller
      */
     public function update(Request $request, OrderStatus $orderStatus)
     {
-        $orderStatus->name = strtolower($request->name);
+        $orderStatus->name = $request->name;
         $orderStatus->description = strtolower($request->description);
         $orderStatus->update();
 

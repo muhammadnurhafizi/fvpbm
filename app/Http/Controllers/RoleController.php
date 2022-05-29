@@ -49,7 +49,7 @@ class RoleController extends Controller
     public function store(Request $request)
     {
         $role = new Role;
-        $role->name = strtolower($request->name);
+        $role->name = $request->name;
         $role->description = strtolower($request->description);
         $role->save();
 
@@ -87,7 +87,7 @@ class RoleController extends Controller
      */
     public function update(Request $request, Role $role)
     {
-        $role->name = strtolower($request->name);
+        $role->name = $request->name;
         $role->description = strtolower($request->description);
         $role->update();
 

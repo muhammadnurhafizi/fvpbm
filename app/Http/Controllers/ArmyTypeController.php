@@ -49,7 +49,7 @@ class ArmyTypeController extends Controller
     public function store(Request $request)
     {
         $armyType = new ArmyType;
-        $armyType->name = strtolower($request->name);
+        $armyType->name = $request->name;
         $armyType->description = strtolower($request->description);
         $armyType->save();
 
@@ -87,7 +87,7 @@ class ArmyTypeController extends Controller
      */
     public function update(Request $request, ArmyType $armyType)
     {
-        $armyType->name = strtolower($request->name);
+        $armyType->name = $request->name;
         $armyType->description = strtolower($request->description);
         $armyType->save();
 

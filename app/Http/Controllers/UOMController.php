@@ -49,7 +49,7 @@ class UOMController extends Controller
     public function store(Request $request)
     {
         $uOM = new UOM;
-        $uOM->name = strtolower($request->name);
+        $uOM->name = $request->name;
         $uOM->description = strtolower($request->description);
         $uOM->save();
 
@@ -87,7 +87,7 @@ class UOMController extends Controller
      */
     public function update(Request $request, UOM $uOM)
     {
-        $uOM->name = strtolower($request->name);
+        $uOM->name = $request->name;
         $uOM->description = strtolower($request->description);
         $uOM->update();
 
