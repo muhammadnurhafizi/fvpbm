@@ -34,6 +34,14 @@
                         <li><a class="dropdown-item" href="{{ route('veteranStatuses.index') }}">Veteran Statuses</a></li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbar-menu-user-management" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Patients
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbar-menu-user-management">
+                        <li><a class="dropdown-item" href="{{ route('armyCards.index') }}">Army Cards</a></li>
+                    </ul>
+                </li>
             </ul>
             {{-- <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
