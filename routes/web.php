@@ -31,3 +31,4 @@ Route::resource('states', App\Http\Controllers\StateController::class);
 Route::resource('quantityFormulas', App\Http\Controllers\QuantityFormulaController::class);
 Route::resource('uOMs', App\Http\Controllers\UOMController::class);
 Route::resource('armyTypes', App\Http\Controllers\ArmyTypeController::class);
+Route::resource('patientRelations', App\Http\Controllers\PatientRelationController::class);
