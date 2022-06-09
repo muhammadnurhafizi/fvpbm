@@ -41,6 +41,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbar-menu-user-management">
                         <li><a class="dropdown-item" href="{{ route('armyCards.index') }}">Army Cards</a></li>
+                        <li><a class="dropdown-item" href="{{ route('patients.index') }}">Patients</a></li>
                     </ul>
                 </li>
             </ul>
