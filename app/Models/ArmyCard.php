@@ -21,4 +21,8 @@ class ArmyCard extends Model
     public function army_type() {
         return $this->belongsTo(ArmyType::class);
     }
+
+    public function relatives() {
+        return $this->hasMany(Relative::class);
+    }
 }
