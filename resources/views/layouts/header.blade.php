@@ -8,15 +8,6 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbar-menu-user-management" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        User Managements
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbar-menu-user-management">
-                        <li><a class="dropdown-item" href="{{ route('roles.index') }}">Roles</a></li>
-                        <li><a class="dropdown-item" href="{{ route('users.index') }}">Users</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbar-menu-user-management" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Maintenances
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbar-menu-user-management">
@@ -26,6 +17,7 @@
                         <li><a class="dropdown-item" href="{{ route('frequencies.index') }}">Frequencies</a></li>
                         <li><a class="dropdown-item" href="{{ route('genders.index') }}">Genders</a></li>
                         <li><a class="dropdown-item" href="{{ route('hospitals.index') }}">Hospitals</a></li>
+                        <li><a class="dropdown-item" href="{{ route('instructions.index') }}">Instructions</a></li>
                         <li><a class="dropdown-item" href="{{ route('orderStatuses.index') }}">Order Statuses</a></li>
                         <li><a class="dropdown-item" href="{{ route('patientRelations.index') }}">Patient Relations</a></li>
                         <li><a class="dropdown-item" href="{{ route('quantityFormulas.index') }}">Quantity Formulas</a></li>
@@ -42,6 +34,15 @@
                     <ul class="dropdown-menu" aria-labelledby="navbar-menu-user-management">
                         <li><a class="dropdown-item" href="{{ route('armyCards.index') }}">Army Cards</a></li>
                         <li><a class="dropdown-item" href="{{ route('patients.index') }}">Patients</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbar-menu-user-management" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        User Managements
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbar-menu-user-management">
+                        <li><a class="dropdown-item" href="{{ route('roles.index') }}">Roles</a></li>
+                        <li><a class="dropdown-item" href="{{ route('users.index') }}">Users</a></li>
                     </ul>
                 </li>
             </ul>
