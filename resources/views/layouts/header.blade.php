@@ -20,6 +20,7 @@
                         <li><a class="dropdown-item" href="{{ route('instructions.index') }}">Instructions</a></li>
                         <li><a class="dropdown-item" href="{{ route('orderStatuses.index') }}">Order Statuses</a></li>
                         <li><a class="dropdown-item" href="{{ route('patientRelations.index') }}">Patient Relations</a></li>
+                        <li><a class="dropdown-item" href="{{ route('priceTypes.index') }}">Price Types</a></li>
                         <li><a class="dropdown-item" href="{{ route('quantityFormulas.index') }}">Quantity Formulas</a></li>
                         <li><a class="dropdown-item" href="{{ route('salesPersons.index') }}">Sales Persons</a></li>
                         <li><a class="dropdown-item" href="{{ route('states.index') }}">States</a></li>
