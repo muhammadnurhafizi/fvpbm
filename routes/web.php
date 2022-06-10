@@ -35,6 +35,7 @@ Route::resource('armyTypes', App\Http\Controllers\ArmyTypeController::class);
 Route::resource('patientRelations', App\Http\Controllers\PatientRelationController::class);
 Route::resource('genders', App\Http\Controllers\GenderController::class);
 Route::resource('instructions', App\Http\Controllers\InstructionController::class);
+Route::resource('priceTypes', App\Http\Controllers\PriceTypeController::class);
 
 Route::resource('armyCards', App\Http\Controllers\ArmyCardController::class);
 Route::resource('armyCards.patients', App\Http\Controllers\PatientController::class)->except(['index']);
