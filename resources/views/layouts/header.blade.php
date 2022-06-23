@@ -7,10 +7,18 @@
         <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbar-menu-user-management" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbar-menu-inventory" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Inventory
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbar-menu-inventory">
+                        <li><a class="dropdown-item" href="{{ route('items.index') }}">Items</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbar-menu-maintenance" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Maintenances
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbar-menu-user-management">
+                    <ul class="dropdown-menu" aria-labelledby="navbar-menu-maintenance">
                         <li><a class="dropdown-item" href="{{ route('agencies.index') }}">Agencies</a></li>
                         <li><a class="dropdown-item" href="{{ route('armyTypes.index') }}">Army Types</a></li>
                         <li><a class="dropdown-item" href="{{ route('clinics.index') }}">Clinics</a></li>
@@ -29,10 +37,10 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbar-menu-user-management" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbar-menu-patient" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Patients
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbar-menu-user-management">
+                    <ul class="dropdown-menu" aria-labelledby="navbar-menu-patient">
                         <li><a class="dropdown-item" href="{{ route('armyCards.index') }}">Army Cards</a></li>
                         <li><a class="dropdown-item" href="{{ route('patients.index') }}">Patients</a></li>
                     </ul>
