@@ -40,3 +40,5 @@ Route::resource('priceTypes', App\Http\Controllers\PriceTypeController::class);
 Route::resource('armyCards', App\Http\Controllers\ArmyCardController::class);
 Route::resource('armyCards.patients', App\Http\Controllers\PatientController::class)->except(['index']);
 Route::resource('patients', App\Http\Controllers\PatientController::class)->only(['index']);
+
+Route::resource('items', App\Http\Controllers\ItemController::class);
