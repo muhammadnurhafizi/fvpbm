@@ -29,4 +29,8 @@ class Item extends Model
     public function stock() {
         return $this->hasOne(Stock::class);
     }
+
+    public function prices() {
+        return $this->hasMany(Price::class);
+    }
 }
