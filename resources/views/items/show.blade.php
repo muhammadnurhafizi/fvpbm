@@ -6,7 +6,7 @@
 
 @section('content')
     
-    <div class="row">
+    <div class="row mb-3">
         <div class="col-12">
             <div class="row mb-3">
                 <div class="col-12">
@@ -112,6 +112,91 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Purchase Price</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table text-nowrap align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Amount (RM)</th>
+                                            <th>Start Date</th>
+                                            <th>Remarks</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (sizeOf($purchase_prices))
+                                            @foreach ($purchase_prices as $price)
+                                                <tr>
+                                                    <td>{{ $loop->iteration }}</td>
+                                                    <td><a href="{{ route('items.prices.show', ['item'=>$item->id, 'price'=>$price->id]) }}" class="text-decoration-none">RM {{ number_format($price->amount, 2) }}</a></td>
+                                                    <td>{{ date_format(date_create($price->started_at), DATE_RSS) }}</td>
+                                                    <td>{{ ucfirst($price->description) }}</td>
+                                                </tr>
+                                            @endforeach
+                                        @else
+                                            <tr>
+                                                <td colspan="4" class="text-center py-3 border-0"><span class="fw-bold text-secondary">Data not found</span></td>
+                                            </tr>
+                                        @endif
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer"><a href="{{ route('items.prices.create', ['item'=>$item->id, 'type'=>2]) }}" class="btn btn-primary float-end"><i class="fas fa-plus"></i> Add Price</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Selling Price</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table text-nowrap align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Amount (RM)</th>
+                                            <th>Start Date</th>
+                                            <th>Remarks</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (sizeOf($selling_prices))
+                                            @foreach ($selling_prices as $price)
+                                                <tr>
+                                                    <td>{{ $loop->iteration }}</td>
+                                                    <td><a href="{{ route('items.prices.show', ['item'=>$item->id, 'price'=>$price->id]) }}" class="text-decoration-none">RM {{ number_format($price->amount, 2) }}</a></td>
+                                                    <td>{{ date_format(date_create($price->started_at), DATE_RSS) }}</td>
+                                                    <td>{{ ucfirst($price->description) }}</td>
+                                                </tr>
+                                            @endforeach
+                                        @else
+                                            <tr>
+                                                <td colspan="4" class="text-center py-3 border-0"><span class="fw-bold text-secondary">Data not found</span></td>
+                                            </tr>
+                                        @endif
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer"><a href="{{ route('items.prices.create', ['item'=>$item->id, 'type'=>1]) }}" class="btn btn-primary float-end"><i class="fas fa-plus"></i> Add Price</a></div>
                     </div>
                 </div>
             </div>
