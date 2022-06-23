@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Frequency;
 use App\Models\Instruction;
 use App\Models\Item;
+use App\Models\Price;
 use App\Models\PriceType;
 use App\Models\QuantityFormula;
 use App\Models\UOM;
@@ -85,7 +86,10 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        return view('items.show', compact('item'));
+        $selling_prices = Price::where('item_id', $item->id)->where('price_type_id', 1)->get();
+        $purchase_prices = Price::where('item_id', $item->id)->where('price_type_id', 2)->get();
+
+        return view('items.show', compact('item', 'selling_prices', 'purchase_prices'));
     }
 
     /**
